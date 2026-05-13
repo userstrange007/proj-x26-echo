@@ -6,7 +6,7 @@
   <title>Birthday Surprise</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Great+Vibes&family=Montserrat:wght@500;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,12 +20,14 @@
   <!-- Welcome Screen -->
   <div class="screen" id="welcomeScreen">
     <h1>WELCOME</h1>
+    <h2>A Small Gift From Us to You</h2>
+
 <div class="welcome-divider">
   <span></span>
   <div class="heart">♥</div>
   <span></span>
 </div>
-    <p>Enter the password</p>
+    <p>Enter the Date</p>
 
     <input type="password" id="passwordInput" placeholder="DDMM" />
 
@@ -34,29 +36,53 @@
     <p id="errorMsg"></p>
   </div>
 
+
 <!-- Main Page (hidden initially) -->
-<div class="screen" id="mainScreen" style="display:none;">
 
-  <h1 class="main-title">Happy Birthday ❤️</h1>
+<div class="main-page hidden" id="mainPage">
 
-  <p class="subtitle">A small gift made with love</p>
+<div class="main-orbs">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
 
-  <!-- Memory Section -->
-  <div class="memory-section">
-    <div class="memory-card">Memory 1</div>
-    <div class="memory-card">Memory 2</div>
-    <div class="memory-card">Memory 3</div>
-  </div>
+<button id="muteBtn" onclick="toggleMusic()">
+  🔊
+</button>
 
-  <!-- Message Section -->
-  <div class="message-box">
-    <p>
-      Wishing you joy, peace, and endless blessings.  
-      May your life be filled with love and grace. ✨
-    </p>
-  </div>
+
+
+  <section class="hero-section">
+
+    <div class="sound-box" id="soundBox">
+      <p>Would you like to continue with sound?</p>
+
+      <div class="sound-buttons">
+        <button onclick="startWithSound()">With Sound</button>
+        <button onclick="startWithoutSound()">Without Sound</button>
+      </div>
+    </div>
+
+      <h1 class="birthday-title hidden-title" id="birthdayTitle">
+        Happy Birthday!
+      </h1>
+
+      <p class="birthday-name hidden-body" id="birthdayName">
+        Dr. ABCDE FGH IJKLM
+      </p>
+
+  </section>
+
+  <section class="body-section hidden-body" id="bodySection">
+    <p>We’ll add wishes, prayers, photos and memories here soon.</p>
+  </section>
 
 </div>
+
+<audio id="bgMusic" loop>
+  <source src="music/goodness.mp3" type="audio/mp3">
+</audio>
 
   <script src="script.js"></script>
 </body>
