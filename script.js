@@ -56,11 +56,20 @@ function toggleMusic() {
 
 function revealBirthday() {
   const soundBox = document.getElementById("soundBox");
+  const banner = document.getElementById("partyBanner");
   const title = document.getElementById("birthdayTitle");
   const body = document.getElementById("bodySection");
   const name = document.getElementById("birthdayName");
+  const blessing = document.getElementById("blessingSection");
+  const memory = document.getElementById("memoryTimeline");
+  const wishes = document.getElementById("wishesSection");
 
   soundBox.classList.add("hide-sound-box");
+
+  setTimeout(() => {
+  banner.classList.remove("hidden-body");
+  banner.classList.add("show-body");
+}, 250);
 
   setTimeout(() => {
   name.classList.remove("hidden-body");
@@ -71,6 +80,21 @@ function revealBirthday() {
     title.classList.remove("hidden-title");
     title.classList.add("show-title");
   }, 400);
+
+  setTimeout(() => {
+  blessing.classList.remove("hidden-body");
+  blessing.classList.add("show-body");
+}, 1500);
+
+  setTimeout(() => {
+  memory.classList.remove("hidden-body");
+  memory.classList.add("show-body");
+}, 2600);
+
+  setTimeout(() => {
+  wishes.classList.remove("hidden-body");
+  wishes.classList.add("show-body");
+}, 3400);
 
   setTimeout(() => {
     body.classList.remove("hidden-body");
