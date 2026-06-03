@@ -1,33 +1,17 @@
 function checkPassword() {
 
-  let password = document.getElementById("passwordInput").value;
-  let error = document.getElementById("errorMsg");
-
-  if (password.trim() === "") {
-
-    error.textContent = "Please enter a date ✨";
-    return;
-
-  }
-
-  error.textContent = "";
-
   const welcomeScreen = document.getElementById("welcomeScreen");
   const mainPage = document.getElementById("mainPage");
 
   welcomeScreen.classList.add("fade-out");
 
   setTimeout(() => {
-
     welcomeScreen.style.display = "none";
 
     document.body.classList.add("main-active");
 
     mainPage.classList.remove("hidden");
     mainPage.classList.add("fade-in");
-
-    window.scrollTo(0, 0);
-
   }, 700);
 }
 
