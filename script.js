@@ -1,11 +1,12 @@
 function checkPassword() {
+
   let password = document.getElementById("passwordInput").value;
   let error = document.getElementById("errorMsg");
 
-  let correctPassword = "0608";
-
-  if (password === correctPassword) {
-    error.textContent = "";
+  if (password.trim() === "") {
+    error.textContent = "Please enter a date ✨";
+    return;
+  }
 
     const welcomeScreen = document.getElementById("welcomeScreen");
     const mainPage = document.getElementById("mainPage");
