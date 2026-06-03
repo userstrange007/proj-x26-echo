@@ -4,9 +4,13 @@ function checkPassword() {
   let error = document.getElementById("errorMsg");
 
   if (password.trim() === "") {
+
     error.textContent = "Please enter a date ✨";
     return;
+
   }
+
+  error.textContent = "";
 
     const welcomeScreen = document.getElementById("welcomeScreen");
     const mainPage = document.getElementById("mainPage");
