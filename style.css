@@ -41,6 +41,10 @@
   color: #d96aa5;
 }
 
+:root {
+  color-scheme: light;
+}
+
 
 * {
   margin: 0;
